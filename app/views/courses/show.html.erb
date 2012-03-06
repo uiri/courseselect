@@ -1,0 +1,23 @@
+<p>
+  <b>Code:</b>
+  <%=h @course.code %>
+</p>
+
+<p>
+  <b>Recommended mark:</b>
+  <%=h @course.recommended_mark %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @course.title %>
+</p>
+
+<p>
+  <b>Prerequisites:</b>
+  <%=h @course.prerequisites %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

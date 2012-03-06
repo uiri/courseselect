@@ -1,0 +1,24 @@
+<h1>Listing student_courses</h1>
+
+<table>
+  <tr>
+    <th>Mark</th>
+    <th>Student</th>
+    <th>Course</th>
+  </tr>
+
+<% @student_courses.each do |student_course| %>
+  <tr>
+    <td><%=h student_course.mark %></td>
+    <td><%=h student_course.student_id %></td>
+    <td><%=h student_course.course_id %></td>
+    <td><%= link_to 'Show', student_course %></td>
+    <td><%= link_to 'Edit', edit_student_course_path(student_course) %></td>
+    <td><%= link_to 'Destroy', student_course, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New student_course', new_student_course_path %>
